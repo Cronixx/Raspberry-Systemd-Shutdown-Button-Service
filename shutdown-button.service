@@ -1,0 +1,9 @@
+[Unit]
+Description=Shutdown Button Service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/shutdown_button.py
+
+[Install]
+WantedBy=default.target
