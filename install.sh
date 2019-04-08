@@ -43,10 +43,10 @@ while [[ $repeat -ne 0 ]]; do
 done
 
 
-# Copy python script to /usr/local/bin
+# Copy python script to /usr/local/sbin
 echo "Shutdown button is configured on GPIO$SHUTDOWN_BUTTON_PIN"
-echo "Copying configured script to /usr/local/bin"
-cp $(realpath shutdown_button.py) /usr/local/bin
+echo "Copying configured script to /usr/local/sbin"
+cp $(realpath shutdown_button.py) /usr/local/sbin
 
 # Copy systemd unit file to /etc/systemd/system
 echo "Copying systemd-unit file to /etc/systemd/system"
