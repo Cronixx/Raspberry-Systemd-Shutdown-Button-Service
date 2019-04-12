@@ -16,7 +16,7 @@ while [[ $repeat -ne 0 ]] ; do
 		echo "Please provide a valid pin number" 1>&2
 	else
 		repeat=0
-		export SHUTDOWN_BUTTON_PIN=$pin
+		SHUTDOWN_BUTTON_PIN=$pin
 	fi
 done
 
@@ -32,10 +32,10 @@ while [[ $repeat -ne 0 ]]; do
 	else
 		echo $yes_no | egrep -q '^y$'
 		if [[ $? -eq 0 ]]; then
-			export SHUTDOWN_BUTTON_PRINT="True"
+			SHUTDOWN_BUTTON_PRINT="True"
 			echo "Console print set to 'yes'"
 		else
-			export SHUTDOWN_BUTTON_PRINT="False"
+			SHUTDOWN_BUTTON_PRINT="False"
 			echo "Console print set to 'no'"
 		fi
 		repeat=0
