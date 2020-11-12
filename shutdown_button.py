@@ -18,7 +18,7 @@ should_print_to_console = bool(os.environ["SHUTDOWN_BUTTON_PRINT"])
 
 # initialization
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(input_pin_number, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(input_pin_number, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # confirm config
 if should_print_to_console:
